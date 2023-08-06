@@ -1,6 +1,5 @@
 package com.examly.springapp.controller;
 
-
 import com.examly.springapp.repository.*;
 import com.examly.springapp.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +45,10 @@ public class TaskController {
     }
 
 
+    /**
+     * @param holderName
+     * @return
+     */
     @GetMapping("/getTask/{holderName}")
     public ResponseEntity<?> deleteByHolderName(@PathVariable String holderName){
         List<Task> allTask = (List<Task>) taskRepository.findAll();
